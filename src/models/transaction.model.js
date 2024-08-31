@@ -14,6 +14,6 @@ const transactionSchema = new Schema({
 
 },{timeStamps:true})    
 
-export const User = mongoose.model("User",transactionSchema)
+export const transactions = mongoose.model("transactions",transactionSchema)
 
 
