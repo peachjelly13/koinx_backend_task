@@ -13,7 +13,7 @@ const priceEntry = new Schema({
 });
 
 const ethereumPrice = new Schema({
-    ethereumPrice: [{priceEntry}]
+    ethereumPrice: [priceEntry]
 })
 
 export const EthereumPrice = mongoose.model("EthereumPrice",ethereumPrice);
