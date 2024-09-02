@@ -61,9 +61,7 @@ const userTransactions = asyncHandler(async (req, res) => {
                 );
 
                 transactionIds.push(savedTransaction._id);
-            }
-
-          
+            }    
             const user = await User.findOneAndUpdate(
                 { address: address },
                 { $set: { address: address }, $addToSet: { transactions: { $each: transactionIds } } },

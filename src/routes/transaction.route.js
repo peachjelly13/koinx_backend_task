@@ -1,8 +1,8 @@
 import { Router } from "express";
-import {userTransactions} from "../controllers/user.controller.js"
+import userTransactions from "../controllers/user.controller.js"
 const router = Router();
 
 
-router.get("/transactions/:address").get(userTransactions)
+router.route("/transactions").get(userTransactions)
 
 export default router;
