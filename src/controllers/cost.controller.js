@@ -3,6 +3,7 @@ import { ApiResponse } from "../utils/apiResponse.js";
 import { ApiError } from "../utils/apiError.js";
 import axios from "axios";
 import { ETHERSCAN_BASE_URL } from "../constants.js";
+import { ETHEREUM_PRICE_URL } from "../constants.js";
 
 const totalCost = asyncHandler(async (req, res) => {
     const { address } = req.body;
@@ -34,7 +35,11 @@ const totalCost = asyncHandler(async (req, res) => {
             return acc + (gasUsed * gasPrice) / 1e18;
         }, 0);
 
-        return res.status(200).json(new ApiResponse(200, totalCost, "Total expense calculated successfully"));
+        const ether = await axios.get(ETHEREUM_PRICE_URL);
+        const currentEther = ether.data.ethereum.inr;
+
+
+        return res.status(200).json(new ApiResponse(200, `totalEther:${currentEther}, totalCost:${totalCost}`, "Total expense calculated successfully"));
 
     } catch (error) {
        
