@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 import { Schema } from 'mongoose';
-import { Transactions } from './transactions.model.js';
+import { Transactions } from '../models/transactions.model.js'
 
 const userSchema = new Schema({
     address: {
