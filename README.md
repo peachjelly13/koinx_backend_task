@@ -3,7 +3,7 @@ Backend assignment for Koinx
 
 __API_ENDPOINTS__
 
-**NOTE** 
+*** **NOTE** ***
 
 **THESE ARE JUST API'S FOR HOW THEY WOULD WORK IN YOUR LOCAL DEVELOPMENT SERVER**
 
