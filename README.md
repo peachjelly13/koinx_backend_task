@@ -3,7 +3,7 @@ Backend assignment for Koinx
 
 __API_ENDPOINTS__
 
-**NOTE** THESE ARE JUST API'S FOR HOW THEY WOULD WORK IN YOUR LOCAL DEVELOPMENT SERVER
+**NOTE** **THESE ARE JUST API'S FOR HOW THEY WOULD WORK IN YOUR LOCAL DEVELOPMENT SERVER**
 
 1.) http://localhost:9000/api/v1/users/transactions ->  __API to fetch the crypto transactions of a user and store the transactions in MongoDB__
 2.) http://localhost:9000/api/v1/price/ethereum-price -> __API to fetch the price of Ethereum every 10 minutes and store it in the database.__
