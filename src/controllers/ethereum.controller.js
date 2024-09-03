@@ -8,7 +8,7 @@ const ethereumPrice = asyncHandler(async (_, res) => {
   try {
   
     const response = await axios.get(ETHEREUM_PRICE_URL);
-    console.log('API Response:', response.data);
+    // console.log('API Response:', response.data);
     if (!response.data || !response.data.ethereum || typeof response.data.ethereum.inr === 'undefined') {
       throw new Error('Invalid response structure from the API');
     }

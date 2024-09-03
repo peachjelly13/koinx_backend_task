@@ -21,7 +21,6 @@ const totalCost = asyncHandler(async (req, res) => {
             apikey: process.env.ETHERSCAN_BASE_API_KEY
         };
 
-        // Fetch transactions from Etherscan
         const response = await axios.get(ETHERSCAN_BASE_URL, { params });
         const transactions = response.data.result;
 
