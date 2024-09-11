@@ -22,6 +22,10 @@ const ethereumPrice = asyncHandler(async (_, res) => {
       { $push: { ethereumPrice: currentEthereumPrice } },
       { upsert: true }
     );
+    res.status(200).json({
+      message: 'Ethereum price updated successfully',
+      data: currentEthereumPrice
+    });
     
   } catch (error) {
  
